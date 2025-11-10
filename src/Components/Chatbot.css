@@ -235,6 +235,41 @@ button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(139,69,1
 
 
 
+/* === Nouveau Loader : 3 points rebondissants === */
+.typing-indicator-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+}
+
+.typing-indicator-dots div {
+  width: 8px;
+  height: 8px;
+  background: #8b4513;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.typing-indicator-dots div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator-dots div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+
 
 /* Chatbot.css — version finale fluide & harmonisée */
 

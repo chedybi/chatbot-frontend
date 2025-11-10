@@ -70,7 +70,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
         <ul className="nav-links">
           <li><NavLink to="/accueil" className={isActive("/accueil") ? "active-link" : ""}>Accueil</NavLink></li>
           <li><NavLink to="/programme" className={isActive("/programme") ? "active-link" : ""}>Programme</NavLink></li>
-          <li><NavLink to="/chatbot" className={isActive("/chatbot") ? "active-link" : ""}>Chatbot</NavLink></li>
+          <li><NavLink to="/chatbot" className={isActive("/chatbot") ? "active-link" : ""}>Chats</NavLink></li>
           <li><NavLink to="/faq" className={isActive("/faq") ? "active-link" : ""}>FAQ</NavLink></li>
           <li><NavLink to="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact</NavLink></li>
 

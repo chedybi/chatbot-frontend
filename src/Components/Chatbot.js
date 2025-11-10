@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Chatbot.css";
 import ReactMarkdown from "react-markdown";
+import { Loader2 } from "lucide-react";
 
 let mediaRecorder = null;
 let chunks = [];
@@ -303,8 +304,8 @@ if (data.answer) {
       </div>
 
       {isLoading && (
-        <div className="bot-message typing-indicator fade-in">
-          <Circles height={30} width={30} color="#8B4513" />
+          <div className="bot-message typing-indicator fade-in" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <Loader2 className="spin" size={26} />          
           <span className="typing-dots">Le chatbot réfléchit...</span>
         </div>
       )}
