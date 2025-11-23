@@ -64,7 +64,7 @@ const ChildTracker = ({ childId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/child/${childId}/position`, {
+      const res = await axios.put(`http://217.182.65.236:8000/api/child/${childId}/position`, {
         latitude: parseFloat(latitude),
         longitude: parseFloat(longitude),
       });

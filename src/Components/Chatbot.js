@@ -75,7 +75,7 @@ const Chatbot = () => {
     setShowNotification(false);
 
     try {
-      const res = await fetch("http://localhost:5000/api/ask", {
+      const res = await fetch("http://217.182.65.236:8000/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -93,7 +93,7 @@ if (!res.ok) throw new Error(data.error || "Erreur serveur");
 // 🎧 Si la réponse est uniquement vocale (pas de texte à afficher)
 if (data.text_visible === false && data.audio) {
   try {
-    const audio = new Audio(`http://127.0.0.1:5000/${data.audio}`);
+    const audio = new Audio(`http://217.182.65.236:8000/${data.audio}`);
     await audio.play();
   } catch (err) {
     console.warn("⚠️ Lecture audio échouée:", err);
@@ -190,7 +190,7 @@ if (data.answer) {
         reader.onloadend = async () => {
           const base64Audio = reader.result.split(",")[1];
           try {
-            const res = await fetch("http://localhost:5000/api/ask", {
+            const res = await fetch("http://217.182.65.236:8000/api/ask", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({

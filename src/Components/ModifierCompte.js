@@ -32,7 +32,7 @@ const ModifierCompte = ({ userData, onUpdate }) => {
     if (!confirm) return;
 
     try {
-      const response = await axios.put("http://localhost:5000/api/modifier-compte", form);
+      const response = await axios.put("http://217.182.65.236:8000/api/modifier-compte", form);
       alert("Compte modifié avec succès !");
       if (onUpdate) onUpdate();
     } catch (error) {
